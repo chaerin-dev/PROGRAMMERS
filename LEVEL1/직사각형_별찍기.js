@@ -19,7 +19,9 @@ process.stdin.on("data", (data) => {
   console.log(answer);
 });
 
-/* 좋았던 다른 사람의 풀이
+/* 좋았던 다른 사람의 풀이:
+문자열을 주어진 횟수만큼 반복한 새로운 문자열을 반환하는 .repeat를 사용!!!
+
 process.stdin.setEncoding("utf8");
 process.stdin.on("data", (data) => {
   const n = data.split(" ");
