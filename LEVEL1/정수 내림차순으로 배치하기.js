@@ -12,7 +12,7 @@ function solution(n) {
 +문자열 을 이용해 정수로 형 변환을 한 것이 인상깊었다.
 또, 체이닝 기법을 활용한 점도 새로웠다!
 
-function solution2(n) {
+function solution(n) {
   const strN = n + "";
   const arrN = strN.split("").sort().reverse().join("");
   return +arrN;
