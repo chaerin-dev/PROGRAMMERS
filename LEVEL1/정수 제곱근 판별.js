@@ -18,5 +18,3 @@ function solution(n) {
   return x%1 === 0 ? Math.pow(x + 1, 2) : -1;
 }
 */
-
-console.log(1.2 % 1);
