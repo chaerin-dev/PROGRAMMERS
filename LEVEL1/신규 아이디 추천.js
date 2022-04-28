@@ -50,7 +50,7 @@ function solution(new_id) {
 padEnd라는 메서드를 처음 알았다! 
 padEnd(길이, 채울 문자열): 현재 문자열에 다른 문자열을 채워 주어진 길이의 새로운 문자열 반환
 
-const solution = (new_id) => {
+function solution(new_id) {
   const id = new_id
     .toLowerCase()
     .replace(/[^\w\d-_.]/g, "")
@@ -60,5 +60,22 @@ const solution = (new_id) => {
     .slice(0, 15)
     .replace(/^\.|\.$/g, "");
   return id.padEnd(3, id[id.length - 1]);
-};
+}
+*/
+
+/* 좋았던 다른 사람의 풀이 3:
+정규식과 체이닝을 이용해서 한줄로 끝낸 코드...
+정규식의 활용가능성은 무궁무진하구나...
+
+function solution(new_id) {
+  return new_id
+    .toLowerCase()
+    .replace(/[^\w-_.]/g, "")
+    .replace(/\.+/g, ".")
+    .replace(/^\.|\.$/g, "")
+    .replace(/^$/, "a")
+    .match(/^.{0,14}[^.]/)[0]
+    .replace(/^(.)$/, "$1$1$1")
+    .replace(/^(.)(.)$/, "$1$2$2");
+}
 */
