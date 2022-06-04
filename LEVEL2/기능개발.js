@@ -23,3 +23,25 @@ function solution(progresses, speeds) {
   // 정답 반환
   return answer;
 }
+
+/* 좋았던 다른 사람의 풀이:
+for문에서 i, j 두 개의 변수를 선언하여 j를 answer배열의 index로 사용한 점이 인상깊었다.
+cnt변수를 따로 사용할 필요가 없고, 가독성도 좋다! 이 방식을 다양하게 활용할 수 있을 것 같다.
+
+function solution(progresses, speeds) {
+  let answer = [0];
+  let days = progresses.map((progress, index) => Math.ceil((100 - progress) / speeds[index]));
+  let maxDay = days[0];
+
+  for (let i = 0, j = 0; i < days.length; i++) {
+    if (days[i] <= maxDay) {
+      answer[j] += 1;
+    } else {
+      maxDay = days[i];
+      answer[++j] = 1;
+    }
+  }
+
+  return answer;
+}
+*/
