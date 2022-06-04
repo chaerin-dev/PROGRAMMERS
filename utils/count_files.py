@@ -27,7 +27,7 @@ def make_info(files_info, total_file_count):
 
 def make_read_me(info):
     return f"""# PROGRAMMERS
-코딩테스트 대비 프로그래머스 문제 풀이<br>
+코딩테스트 대비 프로그래머스 문제 풀이<br><br>
 {info}
 """
 
